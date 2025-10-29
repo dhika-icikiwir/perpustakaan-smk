@@ -1,4 +1,9 @@
-
+<?php
+include "../koneksi.php";
+$no = 1;
+$sql = "SELECT * FROM kategori";
+$data = mysqli_query($koneksi, $sql);
+?>
 <html lang="en">
 
 <head>
@@ -9,10 +14,7 @@
     <h1 align="center">halaman tampil kategori</h1>
     <nav>
         <ul>
-            <li><a href="../index.php">dashboard</a></li>
-            <li><a href="../buku/tampil_buku.php">tampil buku</a></li>
-            <li><a href="../peminjaman/tampil_peminjaman.php">tampil peminjaman</a></li>
-            <li><a href="../anggota/tampil_anggota.php">tampil anggota</a></li>
+            <li><a href="../index.php">kembali ke dashboard</a></li>
         </ul>
     </nav> 
 
@@ -23,11 +25,21 @@
             <th>nama kategori</th>
             <th colspan="2">opsi</th>
         </tr>
-        <td>1</td>
-        <td>88409832</td> 
-        <td>komik</td>
-        <td><a href="update_kategori.php">edit</a></td>
-        <td>delete</td>
+        <tr>
+            <?php
+        while($d = mysqli_fetch_array($data)){
+            
+            ?>
+        <td><?=$no;?></td>
+        <td><?= $d['kode_kategori'];?></td> 
+        <td><?= $d['nama_kategori'];?></td> 
+        <td><a href="update_anggota.php?id=<?= $d['id']; ?>">edit</a></td>  
+        <td><a href="delete_anggota.php?id=<?= $d['id']; ?>">delete</a></td>    
+    </tr>
+    <?php
+    $no++;
+        }
+    ?>
     </table>
     <a href="input_kategori.php">+ tambah kategori</a>
 </body>

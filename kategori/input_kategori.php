@@ -8,10 +8,7 @@
     <h1 align="center">halaman input kategori</h1>
     <nav>
         <ul>
-            <li><a href="../index.php">dashboard</a></li>
-            <li><a href="../buku/tampil_buku.php">tampil buku</a></li>
-            <li><a href="../peminjaman/tampil_peminjaman.php">tampil peminjaman</a></li>
-            <li><a href="../anggota/tampil_anggota.php">tampil anggota</a></li>
+            <li><a href="../index.php">kembali ke dashboard</a></li>
         </ul>
     </nav> 
 

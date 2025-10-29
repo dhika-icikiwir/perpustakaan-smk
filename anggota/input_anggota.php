@@ -52,12 +52,9 @@ if (isset($_POST['simpan'])) {
     <h1 align="center">Halaman Input Anggota</h1>
     <nav>
         <ul>
-            <li><a href="../index.php">Dashboard</a></li>
-            <li><a href="../buku/tampil_buku.php">Tampil Buku</a></li>
-            <li><a href="../peminjaman/tampil_peminjaman.php">Tampil Peminjaman</a></li>
-            <li><a href="../anggota/tampil_anggota.php">Tampil Anggota</a></li>
+            <li><a href="../index.php">kembali ke dashboard</a></li>
         </ul>
-    </nav>
+    </nav> 
 
     <form action="" method="post">
         <label>Kode Anggota:</label><br>

@@ -3,10 +3,7 @@
     <title>Dashboard Perpus SMK Yapis</title>
 </head>
 <body>
-    <header>
         <h1 align="center">dashboard perpustakaan</h1>
-    </header>
-    <nav>
         <ol>
             <li><a href="index.php">dashboard</a></li>
             <li><a href="./peminjaman/tampil_peminjaman.php">tampil peminjaman</a></li>
@@ -18,7 +15,6 @@
             <li><a href="./penerbit/tampil_penerbit.php">tampil penerbit</a></li>
             <li><a href="./user/tampil_user.php">tampil user</a></li>
         </ol>
-    </nav>
 
 </body>
 </html>

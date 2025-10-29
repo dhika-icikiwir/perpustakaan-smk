@@ -23,10 +23,10 @@
        <input type="text"><br><br>
 
     <label>status:</label><br>
-         <select>
-            <option>dipinjam</option>
-            <option>dikembalikan</option>
-        </select>
+    <select>
+        <option>dipinjam</option>
+        <option>dikembalikan</option>
+    </select><br><br>
 
     <label>id anggota:</label><br>
         <input type="date"><br><br>

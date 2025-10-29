@@ -1,3 +1,30 @@
+<?php
+include "../koneksi.php";
+if (isset($_POST['simpan'])) {
+    $kode_kategori = $_POST['kode_kategori'];
+    $nama_kategori = $_POST['nama_kategori'];
+
+
+    $sql = "INSERT INTO kategori
+                (kode_kategori,
+                 nama_kategori)
+              VALUES
+                ('$kode_kategori',
+                 '$nama_kategori')";
+
+    $hasil = mysqli_query($koneksi, $sql);
+    if ($hasil) {
+        header('Location: tampil_kategori.php');
+    } else {
+?>"<script>
+    alert('Gagal menyimpan data:');
+</script>";
+<?php
+    }
+}
+?>
+
+
 <html lang="en">
 
 <head>
@@ -12,13 +39,13 @@
         </ul>
     </nav> 
 
-     <form action="tampil_kategori.php" method="post">
+     <form action="input_kategori.php" method="post">
     <label>kode kategori:</label><br>
-        <input type="text" ><br><br>
+        <input type="text" name="kode_kategori" ><br><br>
 
     <label>nama kategori:</label><br>
-       <input type="text"><br><br>
-        <input type="submit" value="input kategori">
+       <input type="text" name="nama_kategori"><br><br>
+        <input type="submit" name="simpan" value="input kategori">
     </form>
 </body>
 

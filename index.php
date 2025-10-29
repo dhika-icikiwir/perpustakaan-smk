@@ -19,13 +19,6 @@
             <li><a href="./user/tampil_user.php">tampil user</a></li>
         </ol>
     </nav>
-<style>
-    nav ol{
-    font-size: larger;
-    }
-    nav a {
-    color: black; /* warna default hitam */
-    }
-</style>
+
 </body>
 </html>

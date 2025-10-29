@@ -33,8 +33,8 @@ $data = mysqli_query($koneksi, $sql);
         <td><?=$no;?></td>
         <td><?= $d['kode_kategori'];?></td> 
         <td><?= $d['nama_kategori'];?></td> 
-        <td><a href="update_anggota.php?id=<?= $d['id']; ?>">edit</a></td>  
-        <td><a href="delete_anggota.php?id=<?= $d['id']; ?>">delete</a></td>    
+        <td><a href="update_kategori.php?id=<?= $d['id']; ?>">edit</a></td>  
+        <td><a href="delete_kategori.php?id=<?= $d['id']; ?>">delete</a></td>    
     </tr>
     <?php
     $no++;

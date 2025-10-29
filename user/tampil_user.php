@@ -1,4 +1,9 @@
-
+<?php
+include "../koneksi.php";
+$no = 1;
+$sql = "SELECT * FROM user";
+$data = mysqli_query($koneksi, $sql);
+?>
 <html lang="en">
 
 <head>
@@ -22,13 +27,23 @@
             <th>level</th>
             <th colspan="2">opsi</th>
         </tr>
-        <td>1</td>
-        <td>Adhika dipta</td>
-        <td>admin</td>
-        <td>admin123</td>
-        <td>admin</td>
-        <td><a href="update_user.php">edit</a></td>
-        <td>delete</td>
+         <?php
+        while($d = mysqli_fetch_array($data)){
+
+            ?>
+        <tr>
+            <td><?=$no;?></td>
+            <td><?=$d['nama'];?></td>
+            <td><?=$d['username'];?></td>
+            <td><?=$d['password'];?></td>
+            <td><?=$d['level'];?></td>
+        <td><a href="update_user.php?id=<?= $d['id']; ?>">edit</a></td>  
+        <td><a href="delete_user.php?id=<?= $d['id']; ?>">delete</a></td>    
+        </tr>
+        <?php
+        }
+        $no++
+        ?>
     </table>
     <a href="input_user.php">+ tambah user</a>
 </body>

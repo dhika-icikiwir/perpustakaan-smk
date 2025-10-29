@@ -1,3 +1,13 @@
+<?php
+include '../koneksi.php';
+
+// ambil id dari URL
+$id = $_GET['id'];
+// ambil data jurusan berd  asarkan ID
+$data = mysqli_query($koneksi, "SELECT * FROM user WHERE id='$id'");
+$d = mysqli_fetch_array($data);
+?>
+
 <html lang="en">
 
 <head>
@@ -12,20 +22,22 @@
         </ul>
     </nav> 
 
-     <form action="tampil_user.php" method="post">
+     <form action="prs_update_user.php" method="post">
+    <input type="hidden" name="id" value="<?= $d['id']; ?>">
     <label>nama:</label><br>
-        <input type="text"><br><br>
+        <input type="text" name="nama" value="<?=$d['nama'];?>"><br><br>
 
     <label>username:</label><br>
-        <input type="text" ><br><br>
+        <input type="text" name="username" value="<?=$d['username'];?>"><br><br>
 
     <label>password:</label><br>
-        <input type="password" ><br><br>
+        <input type="password" name="password" value="<?=$d['password'];?>"><br><br>
+
 
     <label>level:</label><br>
-        <select>
-            <option>admin</option>
-            <option>petugas</option>
+        <select name="level">
+            <option value="admin"<?=$d['level'];?>>admin</option>
+            <option value="petugas"<?=$d['level'];?>>petugas</option>
         </select><br><br>
         <input type="submit" value="update user">
     </form>

@@ -12,20 +12,20 @@
         </ul>
     </nav> 
 
-     <form action="tampil_user.php" method="post">
+     <form action="prs_input_user.php" method="post">
     <label>nama:</label><br>
-        <input type="text"><br><br>
+        <input type="text" name="nama"><br><br>
 
     <label>username:</label><br>
-        <input type="text" ><br><br>
+        <input type="text" name="username"><br><br>
 
     <label>password:</label><br>
-        <input type="password" ><br><br>
+        <input type="password" name="password"><br><br>
 
     <label>level:</label><br>
-        <select>
-            <option>admin</option>
-            <option>petugas</option>
+        <select name="level">
+            <option value="admin">admin</option>
+            <option value="petugas">petugas</option>
         </select><br><br>
         <input type="submit" value="input user">
     </form>
